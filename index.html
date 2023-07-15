@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Send Mail</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+  <!-- <h1>
+    <span class="txt-rotate" data-period="2000"
+      data-rotate='[ "&nbsp&nbsp Hi !! friends", "Want to send ", "Multiple Emails", "&nbsp in One - click", "Then Welcome..","You are on","Right Platform..","Just upload ","&nbsp &nbsp CSV file","Write message","&nbsp &nbsp &nbsp And ","&nbsp  Send Emails","&nbsp &nbsp &nbsp ENJOY !!!" ]'></span>
+  </h1> -->
+<div class="container">
+  <p id="heading">Mass Mail Dispatcher</p>
+  <div class="form">
+  <form method="post">
+    <label for="senderEmail">From :</label>
+    <input type="email" id="senderEmail" name="senderEmail" required>
+
+    <br><br><br>
+
+    <label for="subject" style="margin-top: -2em;z-index: 22;position: absolute;">Subject:</label>
+    <textarea id="subject" name="subject" required></textarea>
+
+    <br><br><br><br>
+
+    <label for="csvFile">CSV File:</label>
+    <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+
+    <br><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <br><br>
+
+    <input type="button" value="Send Emails" style="font-weight: bold;" onclick="sendEmails()">
+
+    <br>
+
+
+  </form>
+</div>
+</div>
+  <div style="display:flex" class="table">
+    <div>
+      <p style="color: #fafdfe;">Valid Emails: <span id="validEmailCount"></span></p>
+      <div id="validEmails" ></div>
+    </div>
+    <div style="margin-left: 15px">
+      <p style="color: #f1f5f7;">Invalid Emails: <span id="invalidEmailCount"></span></p>
+      <div id="invalidEmails"></div>
+    </div>
+  </div>
+  <!-- <span><img src="Images/boy.png" alt="" class="img1"></span>
+  <img src="Images/cloud.png" alt="" class="img2"> -->
+  <!-- <div class="word"></div> -->
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
